@@ -10,7 +10,7 @@ var personality_insights = watson.personality_insights({
   version:'v2'
 });
 
-fs.readFile('./words.txt','utf8',function(err,data)
+fs.readFile('./resources/words.txt','utf8',function(err,data)
 {
   if (err) throw err;
   personality_insights.profile({ text: data },
